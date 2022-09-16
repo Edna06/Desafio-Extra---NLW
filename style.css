@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./assets/Fundo.png);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+ 
+  background-color: #121214;
+}
+
+body * {
+font-family: 'Montserrat', sans-serif;
+line-height: 160%;
+}
+
+header {
+  margin-top: 32px;
+}
+
+header div {
+  width: 120px;
+  margin: auto;
+
+  background-image: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+
+  border-radius: 50%;
+
+  display: flex;
+  padding: 4px;
+
+  transition: transform .4s;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 580px;
+  width: 90%;
+  margin: 34px auto;
+}
+
+section {
+  background: linear-gradient(90deg, #C91842 0%, #5CC2E2 100%),
+  linear-gradient(0deg, #262629, #262629);
+  
+  padding-top: 4px;
+
+  border-radius: 13px;
+}
+
+section div {
+
+padding: 24px 32px 32px;
+gap: 24px;
+margin-bottom: 24px;
+
+background: #262629;
+border-radius: 8px;
+}
+
+section h2 {
+color: white;
+font-weight: 900;
+
+left: 32px;
+top: 24px;
+line-height: 160%;
+}
+
+section p {
+color: #C1C1C1;
+font-weight: 400;
+
+margin-bottom: 24px;
+}
+
+section ul {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap; 
+  /* limita a quantidade de itens em uma linha */
+  gap: 16px;
+
+}
+
+section ul li img{
+  width: 110px;
+  height: 150px;
+  
+  border-radius: 8px;
+  border: 1px solid #555555;
+
+}    
+
+section ul li {
+  transition: transform .5s;
+}
+
+section ul li:hover{
+  transform: scale(1.1);
+}
+
+section div .social-list{
+ align-items: center;
+ margin-top: 28px;
+}
+
+/* animations */
+
+
+header div {
+animation: topDown .6s .4s backwards;
+}
+
+@keyframes topDown {
+0% {
+  opacity: 0;
+  transform: translateY(-40px);
+} 
+100% {
+  opacity: 1;
+  transform: translateY(0px);
+  }
+}
+
+
+main section:nth-child(1) {
+  animation: leftCenter .6s .6s backwards;
+}
+
+
+main section:nth-child(2) {
+  animation: leftCenter .6s .8s backwards;
+}
+
+main section:nth-child(3) {
+  animation: leftCenter .6s 1s backwards;
+}
+
+
+@keyframes leftCenter {
+ 0% {
+   opacity: 0;
+   transform: translateX(-70px);
+ }
+ 100% {
+   opacity: 1;
+   transform: translateX(0px);
+ }
+}
